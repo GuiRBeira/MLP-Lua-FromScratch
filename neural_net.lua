@@ -101,6 +101,10 @@ function NeuralNet.training(X, T, Wh_inicial, Wo_inicial, theta_h_inicial, theta
 
         -- Imprime a linha final da época, sobrescrevendo a barra de progresso
         print_progress(epoch, epochs, #X, #X, final_loss, final_accuracy)
+        if final_accuracy >= 1.0 then
+            print(string.format("\nParada antecipada na Época %d: Acurácia de 100%% atingida!", epoch))
+            break -- Interrompe o loop principal de épocas
+        end
     end
 
     print("Treinamento concluído.")

@@ -14,13 +14,13 @@ local theta_h_inicial = {0.05, 0.06}
 local theta_o_inicial = {0.07}
 
 local hiperparametros = {
-    optimizer = "adam",        -- Opções: "sgd", "adam"
-    eta = 0.05,                 -- Adam geralmente prefere taxas de aprendizado menores
-    epochs = 180,              -- Número de épocas aumentado para melhor convergência
-    beta1 = 0.9,               -- Parâmetro beta1 para Adam
-    beta2 = 0.999,             -- Parâmetro beta2 para Adam
-    epsilon = 1e-8,            -- Pequeno valor para evitar divisão por zero em Adam
-    activation = "sigmoid"       -- Opções: "cubic", "sigmoid", "soft_cubic"
+    optimizer = "sgd",        -- Opções: "sgd", "adam"
+    eta = 0.5,                 -- Adam geralmente prefere taxas de aprendizado menores
+    epochs = 10000000,              -- Número de épocas aumentado para melhor convergência
+    beta1 = 0.9,               -- Parâmetro beta1 para Adam, se não for usado, pode ser ignorado
+    beta2 = 0.999,             -- Parâmetro beta2 para Adam, se não for usado, pode ser ignorado
+    epsilon = 1e-8,            -- Pequeno valor para evitar divisão por zero em Adam, se não for usado, pode ser ignorado
+    activation = "sigmoid"       -- Opções: "cubic", "sigmoid", "soft_cubic (tanh)"
 }
 
 -- CORREÇÃO FINAL: A ordem das variáveis no retorno agora está correta.
@@ -76,7 +76,7 @@ grafico_fronteira:add_heatmap_series(grid_data)
 grafico_fronteira:add_scatter_series(pontos_xor_data, "Classes XOR")
 grafico_fronteira:render("grafico_fronteira_decisao.png")
 
-print("\n----------------------------------------------------")
+print("\n====================================================")
 print("Projeto concluído com sucesso!")
 print("Verifique os arquivos 'grafico_curva_erro.png' e 'grafico_fronteira_decisao.png'.")
-print("----------------------------------------------------")
+print("====================================================")
