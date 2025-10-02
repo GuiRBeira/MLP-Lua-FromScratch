@@ -1,4 +1,6 @@
 -- plotlib.lua (versão final com visualização 2D)
+-- Disciplina: Sistemas Inteligentes 2
+-- Aluno: Guilherme R. Beira
 
 local PlotLib = {}
 local PlotLibMT = { __index = PlotLib }

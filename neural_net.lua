@@ -1,4 +1,6 @@
 -- neural_net.lua (versão final com barra de progresso estilo Keras)
+-- Disciplina: Sistemas Inteligentes 2
+-- Aluno: Guilherme R. Beira
 
 local M = require("matlib")
 local NeuralNet = {}

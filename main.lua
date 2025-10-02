@@ -1,4 +1,6 @@
 -- main.lua (versão 100% final e corrigida)
+-- Disciplina: Sistemas Inteligentes 2
+-- Aluno: Guilherme R. Beira
 
 print("Carregando módulos...")
 local M = require("matlib")
@@ -14,9 +16,9 @@ local theta_h_inicial = {0.05, 0.06}
 local theta_o_inicial = {0.07}
 
 local hiperparametros = {
-    optimizer = "sgd",        -- Opções: "sgd", "adam"
-    eta = 0.5,                 -- Adam geralmente prefere taxas de aprendizado menores
-    epochs = 10000000,              -- Número de épocas aumentado para melhor convergência
+    optimizer = "adam",        -- Opções: "sgd", "adam"
+    eta = 0.1,                 -- Adam geralmente prefere taxas de aprendizado menores
+    epochs = 100000,              -- Número de épocas aumentado para melhor convergência
     beta1 = 0.9,               -- Parâmetro beta1 para Adam, se não for usado, pode ser ignorado
     beta2 = 0.999,             -- Parâmetro beta2 para Adam, se não for usado, pode ser ignorado
     epsilon = 1e-8,            -- Pequeno valor para evitar divisão por zero em Adam, se não for usado, pode ser ignorado

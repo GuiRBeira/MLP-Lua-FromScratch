@@ -1,3 +1,6 @@
+-- matlib.lua
+-- Disciplina: Sistemas Inteligentes 2
+-- Aluno: Guilherme R. Beira
 -- A simple matrix library for Lua
 -- Matrices are represented as tables of tables (2D arrays)
 -- Vectors are represented as tables (1D arrays)
